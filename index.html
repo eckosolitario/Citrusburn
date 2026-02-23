@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citrus Burn Oficial México - Quema Grasa AHORA o Quédate Gordo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #0a0a0a 0%, #1a0f0f 100%); color: #fff; overflow-x: hidden; }
+        .hero { background: url('1000000113.jpeg') center/cover; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; }
+        h1 { font-size: 4rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; color: #ff4444; }
+        .subtitle { font-size: 1.5rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta { background: linear-gradient(45deg, #ff4444, #cc0000); color: white; padding: 20px 50px; font-size: 1.5rem; font-weight: bold; border: none; border-radius: 50px; cursor: pointer; transition: transform 0.3s; text-transform: uppercase; }
+        .cta:hover { transform: scale(1.05); }
+        section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+        .benefits { background: #111; }
+        .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        .benefit { text-align: center; }
+        .benefit h3 { color: #ff4444; font-size: 1.8rem; margin-bottom: 15px; }
+        .form-section { background: #1a1a1a; }
+        form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 20px; }
+        input, button { padding: 15px; font-size: 1.1rem; border: none; border-radius: 10px; }
+        input { background: #333; color: #fff; }
+        button { background: linear-gradient(45deg, #ff4444, #cc0000); color: white; font-weight: bold; cursor: pointer; }
+        #chat-btn { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; box-shadow: 0 4px 20px rgba(37,211,102,0.5); z-index: 1000; }
+        #chat-window { display: none; position: fixed; bottom: 100px; right: 30px; width: 300px; height: 400px; background: #222; border-radius: 20px; padding: 20px; z-index: 1001; }
+        .close-chat { float: right; cursor: pointer; color: #ff4444; font-size: 1.5rem; }
+        footer { background: #000; padding: 40px 20px; text-align: center; font-size: 0.9rem; }
+        a { color: #ff4444; text-decoration: none; }
+        .policy-links { margin-top: 20px; }
+        .policy-links a { margin: 0 10px; }
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>¡CITRUS BURN!</h1>
+            <p class="subtitle">REACTIVA TU METABOLISMO MUERTO EN 7 DÍAS O MUERE INTENTANDO. ¡GRASA ESTÓMAGO, PIERNAS, TODO SE QUEMA SIN DIETAS NI GIMNASIO!</p>
+            <button class="cta" onclick="redirectToAffiliate()">¡COMPRA AHORA ANTES QUE SE AGOTE! 🔥</button>
+        </div>
+    </div>
 
+    <section class="benefits">
+        <h2 style="text-align: center; font-size: 3rem; margin-bottom: 50px; color: #ff4444;">¿POR QUÉ ESPERAS? ¡MIRA LO QUE HACE CITRUS BURN!</h2>
+        <div class="benefit-grid">
+            <div class="benefit">
+                <h3>Quema Grasa 24/7</h3>
+                <p>Ingredientes clínicos como Citrus Aurantium y Berberina activan tu quema natural SIN estimulantes. ¡Pierde 10kg en 30 días![web:8]</p>
+            </div>
+            <div class="benefit">
+                <h3>Energía Explosiva</h3>
+                <p>Adiós crashes. Ginseng coreano y té verde te dan poder todo el día para DOMINAR tu vida.[web:8]</p>
+            </div>
+            <div class="benefit">
+                <h3>Apetito Controlado</h3>
+                <p>Vinagre de manzana español mata cravings. ¡COME LO QUE QUIERAS Y AÚN PIERDES GRASA![web:8]</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #ff4444;">¡INGRESA TUS DATOS AHORA! Oferta EXCLUSIVA México</h2>
+        <form id="leadForm">
+            <input type="text" id="name" placeholder="Nombre Completo" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Teléfono (WhatsApp)" required>
+            <input type="hidden" id="product" value="Citrus Burn">
+            <button type="submit">¡ACTIVA TU OFERTA YA! 🔥</button>
+        </form>
+        <p style="text-align: center; margin-top: 20px; opacity: 0.8;">Capturamos tu lead y te redirigimos al sitio oficial. ¡60 días garantía![web:8]</p>
+    </section>
+
+    <div id="chat-btn" onclick="toggleChat()">💬</div>
+    <div id="chat-window">
+        <span class="close-chat" onclick="toggleChat()">&times;</span>
+        <h4>Bot Customer Service</h4>
+        <p>¡Hola! ¿Listo para quemar grasa con Citrus Burn? Escribe tus dudas.</p>
+        <p><strong>Común:</strong> ¿Seguro? Sí, GMP/FDA. ¿Envío? Gratis México.</p>
+        <button onclick="window.open('https://wa.me/521234567890?text=Hola Citrus Burn', '_blank')">Chatea WhatsApp</button> <!-- Cambia número -->
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Citrus Burn México. Todos derechos reservados.</p>
+        <div class="policy-links">
+            <a href="#privacy">Política de Privacidad</a>
+            <a href="#terms">Términos de Servicio</a>
+        </div>
+        <div id="privacy" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            <h4>Política de Privacidad</h4>
+            <p>Recopilamos nombre, email y teléfono solo para ofertas exclusivas de Citrus Burn. No compartimos datos sin consentimiento. Cumplimos GDPR/CCPA. Contacto: info@citrusburn.mx. [web:9] Última actualización: Feb 2026.</p>
+        </div>
+        <div id="terms" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            <h4>Términos de Servicio</h4>
+            <p>Al usar esta página, aceptas nuestras condiciones. Promociones afiliadas. No responsable por compras. Consulta médico antes uso. [web:10]</p>
+        </div>
+    </footer>
+
+    <script>
+        const affiliateLink = 'https://tinyurl.com/Citrusburn-2026';
+        const form = document.getElementById('leadForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                product: document.getElementById('product').value
+            };
+            // Envía lead vía EmailJS o fetch (regístrate gratis en emailjs.com y agrega script)
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', data).then(() => {
+                alert('¡Lead capturado! Redirigiendo...');
+                window.location.href = affiliateLink;
+            }).catch(() => {
+                alert('¡Redirect directo!');
+                window.location.href = affiliateLink;
+            });
+            // Para demo sin EmailJS: redirect inmediato
+            // window.location.href = affiliateLink;
+        });
+        function redirectToAffiliate() { window.location.href = affiliateLink; }
+        function toggleChat() {
+            const window = document.getElementById('chat-window');
+            window.style.display = window.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <!-- Agrega tu EmailJS: <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> <script>emailjs.init("YOUR_PUBLIC_KEY");</script> -->
+</body>
+  </html>
